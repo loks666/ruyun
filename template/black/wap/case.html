@@ -1,0 +1,104 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header class="head">
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-detail">
+      <h4>{content:title}</h4>
+      <!-- slide -->
+      <div class="slide">
+        <div class="slide-show owl-carousel owl-theme">
+          {pboot:pics num=10 id={content:id}}
+          <div class="slide-content">
+            <img src="[pics:src]" alt="{content:title}" />
+          </div>
+          {/pboot:pics}
+        </div>
+      </div>
+      <!-- end slide -->
+      <div class="cases-icon">
+        <div class="row">
+          <div class="col s4">
+            <h6>发布时间：</h6>
+          </div>
+          <div class="col s8">
+            <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+            <span>{content:date}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h6>作者：</h6>
+          </div>
+          <div class="col s8">
+            <i class="fa fa-user-o fa-fw" aria-hidden="true"></i>
+            <span>{content:author}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h6>来源：</h6>
+          </div>
+          <div class="col s8">
+            <i class="fa fa-link fa-fw" aria-hidden="true"></i>
+            <span>{content:source}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h6>浏览量：</h6>
+          </div>
+          <div class="col s8">
+            <i class="fa fa-eye fa-fw" aria-hidden="true"></i>
+            <span>（{content:visits}）</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h6>点赞：</h6>
+          </div>
+          <div class="col s8">
+            <i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>
+            <span>（{content:likes}）</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-desc">
+        <blockquote>摘要：{content:description}</blockquote>
+        {content:content}
+        <div class="main-qrcode">
+          {pboot:qrcode string={content:link}}
+          <p>扫一扫，关注我们</p>
+        </div>
+        <div class="main-tags">
+          {pboot:tags id={content:id} scode={sort:tcode}}
+          <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+          {/pboot:tags}
+        </div>
+        <div class="main-likes">
+					<div class="main-likes-icon">
+            <a href="{content:likeslink}" title="点赞">
+              <i class="fa fa-thumbs-up fa-2x fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="main-likes-num">{content:likes}</div>
+				</div>
+      </div>
+    </div>
+    {include file=comm/piece.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

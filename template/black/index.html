@@ -1,0 +1,825 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/swiper.min.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/animate.min.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/index.css">
+{include file=comm/top.html}
+<header>
+{include file=comm/header.html}
+<!-- slide -->
+<section class="slide">
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {pboot:slide gid=1 num=5}
+      <div class="swiper-slide slide-bg[slide:i]">
+        <div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration=".9s" swiper-animate-delay=".1s">
+          <img src="[slide:src]" alt="[slide:title]" />
+        </div>
+        <div class="container">
+          <div class="ani slide-text" swiper-animate-effect="fadeInDown" swiper-animate-duration=".9s" swiper-animate-delay=".1s">
+            <h1>[slide:title]</h1>
+            <p>[slide:subtitle]</p>
+            <div class="seemore">
+              <a href="[slide:link]" title="[slide:title]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/pboot:slide}
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"><i class="fa fa-angle-left fa-5x" aria-hidden="true"></i></div>
+    <div class="swiper-button-next"><i class="fa fa-angle-right fa-5x" aria-hidden="true"></i></div>
+  </div>
+  <!-- banner-nav -->
+  <div class="slide-nav">
+    <div class="container">
+      <ul>
+        <li>
+          {pboot:content id=34}<a href="[content:link]" title="网站搭建">{/pboot:content}
+            <dl>
+              <dt>网站搭建</dt>
+              <dd>官网，导航页，app下载页...</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+           {pboot:content id=41}<a href="[content:link]" title="墨云主机">{/pboot:content}
+            <dl>
+              <dt>墨云主机</dt>
+              <dd>域名注册、云服务器、云主机...</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+           {pboot:content id=43}<a href="[content:link]" title="墨家商城">{/pboot:content}
+            <dl>
+              <dt>墨家商城</dt>
+              <dd>精品网站模板，实用软件工具...</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+           {pboot:content id=62}<a href="[content:link]" title="网站转小程序">{/pboot:content}
+            <dl>
+              <dt>网站转小程序</dt>
+              <dd>各类手机网站转微信小程序...</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+           {pboot:content id=60}<a href="[content:link]" title="定制服务">{/pboot:content}
+            <dl>
+              <dt>定制服务</dt>
+              <dd>联系人工，提交需求，按需定制...</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end slide -->
+<!-- product -->
+<section class="product">
+  <div class="container">
+    <div class="section-title">
+      <h2>服务项目</h2>
+      <p>域名、网站、空间、服务器、小程序，完善的产品满足您的一切所需</p>
+    </div>
+    <div class="product-item">      
+      <ul class="clearfix">
+        <li data-index="1">
+          <div class="product-item-normal">
+            <div class="product-item-icon">
+              <i class="fa fa-laptop fa-2x fa-fw" aria-hidden="true"></i>
+            </div>
+            <div class="product-item-title">
+              <h3>网站建设</h3>
+              <p>优秀的网站是企业的一张名片</p>
+            </div>
+            <div class="product-item-desc">
+              <p>【 高端网站建设 】</p>
+              <p>【 响应式网站 】</p>
+              <p>【 企业官网 】</p>
+            </div>
+            <div class="product-item-price">
+              <p><em>￥</em><span>298</span> /年起</p>
+            </div>
+          </div>
+          <div class="product-item-active">
+            {pboot:sort scode=13}<a href="[sort:link]" class="product-item-link">{/pboot:sort}
+              <div class="product-item-icon">
+                <i class="fa fa-laptop fa-3x fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="product-item-title">
+                <h3>网站建设</h3>
+                <p>优秀的网站是企业的一张名片</p>
+              </div>
+              <div class="product-item-desc">
+                <p>墨轩阁建站为您提供全行业网站制作、网站定制、网站建设服务,您可以在这里挑选网站模板,我们为您提供PC站、手机站、H5站、公众号、小程序等多种网站建设服务。</p>
+              </div>
+              <div class="product-item-price">
+                <p><em>￥</em><span>298</span> /年起</p>
+              </div>
+              <div class="product-item-btn">立即选购</div>
+            </a>
+          </div>
+        </li>
+        <li data-index="2">
+          <div class="product-item-normal">
+            <div class="product-item-icon">
+              <i class="fa fa-mobile fa-2x fa-fw" aria-hidden="true"></i>
+            </div>
+            <div class="product-item-title">
+              <h3>域名注册</h3>
+              <p>国内领先域名服务平台</p>
+            </div>
+            <div class="product-item-desc">
+              <p>【 .top域名首年9元起 】</p>
+              <p>【 云解析服务保障 】</p>
+              <p>【 热销域名自主选择 】</p>
+            </div>
+            <div class="product-item-price">
+              <p><em>￥</em><span>9</span> /年起</p>
+            </div>
+          </div>
+          <div class="product-item-active">
+            {pboot:sort scode=14}<a href="[sort:link]" class="product-item-link">{/pboot:sort}
+              <div class="product-item-icon">
+                <i class="fa fa-mobile fa-3x fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="product-item-title">
+                <h3>域名注册</h3>
+                <p>国内领先域名服务平台</p>
+              </div>
+              <div class="product-item-desc">
+                <p>热销域名自主选择,超千万次注册量,提供批量网站域名申请,查询,域名注册等服务,一站式满足用户域名需求!</p>
+              </div>
+              <div class="product-item-price">
+                <p><em>￥</em><span>9</span> /年起</p>
+              </div>
+              <div class="product-item-btn">立即选购</div>
+            </a>
+          </div>
+        </li>
+        <li data-index="3">
+          <div class="product-item-normal">
+            <div class="product-item-icon">
+              <i class="fa fa-bar-chart fa-2x fa-fw" aria-hidden="true"></i>
+            </div>
+            <div class="product-item-title">
+              <h3>虚拟主机</h3>
+              <p>香港免备案</p>
+            </div>
+            <div class="product-item-desc">
+              <p>【 品牌主机 】</p>
+              <p>【 安全稳定 】</p>
+              <p>【 免费送域名 】</p>
+            </div>
+            <div class="product-item-price">
+              <p><em>￥</em><span>147</span> /年起</p>
+            </div>
+          </div>
+          <div class="product-item-active">
+            {pboot:sort scode=35}<a href="[sort:link]" class="product-item-link">{/pboot:sort}
+              <div class="product-item-icon">
+                <i class="fa fa-bar-chart fa-3x fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="product-item-title">
+                <h3>虚拟主机</h3>
+                <p>香港免备案</p>
+              </div>
+              <div class="product-item-desc">
+                <p>虚拟主机 安全稳定,快速易用,性价比高.1分钟开通,方便快捷,备案免费!买虚拟主机,免费送域名+企业邮箱。</p>
+              </div>
+              <div class="product-item-price">
+                <p><em>￥</em><span>147</span> /年起</p>
+              </div>
+              <div class="product-item-btn">立即选购</div>
+            </a>
+          </div>
+        </li>
+        <li data-index="4">
+          <div class="product-item-normal">
+            <div class="product-item-icon">
+              <i class="fa fa-cog fa-2x fa-fw" aria-hidden="true"></i>
+            </div>
+            <div class="product-item-title">
+              <h3>云服务器</h3>
+              <p>品牌保障,安全智慧!</p>
+            </div>
+            <div class="product-item-desc">
+              <p>【 稳定可靠 】</p>
+              <p>【 性能强劲 】</p>
+              <p>【 易操作和管理 】</p>
+            </div>
+            <div class="product-item-price">
+              <p><em>￥</em><span>172</span> /月起</p>
+            </div>
+          </div>
+          <div class="product-item-active">
+            {pboot:sort scode=14}<a href="[sort:link]" class="product-item-link">{/pboot:sort}
+              <div class="product-item-icon">
+                <i class="fa fa-cog fa-3x fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="product-item-title">
+                <h3>云服务器</h3>
+                <p>品牌保障,安全智慧!</p>
+              </div>
+              <div class="product-item-desc">
+                <p>品牌保障,安全智慧!云主机,云电脑交付快,易操作和管理,稳定可靠.适配Web/电商/游戏/直播/大数据/渲染..</p>
+              </div>
+              <div class="product-item-price">
+                <p><em>￥</em><span>172</span> /月起</p>
+              </div>
+              <div class="product-item-btn">立即选购</div>
+            </a>
+          </div>
+        </li>
+        <li data-index="5">
+          <div class="product-item-normal">
+            <div class="product-item-icon">
+              <i class="fa fa-registered fa-2x fa-fw" aria-hidden="true"></i>
+            </div>
+            <div class="product-item-title">
+              <h3>定制服务</h3>
+              <p>联系人工按需定制</p>
+            </div>
+            <div class="product-item-desc">
+              <p>【 联系人工 】</p>
+              <p>【 按需定制 】</p>
+              <p>【 费用100元 】</p>
+            </div>
+            <div class="product-item-price">
+              <p><em>￥</em><span>100</span> /元起</p>
+            </div>
+          </div>
+          <div class="product-item-active">
+            {pboot:sort scode=26}<a href="[sort:link]" class="product-item-link">{/pboot:sort}
+              <div class="product-item-icon">
+                <i class="fa fa-registered fa-3x fa-fw" aria-hidden="true"></i>
+              </div>
+              <div class="product-item-title">
+                <h3>定制服务</h3>
+                <p>联系人工按需定制</p>
+              </div>
+              <div class="product-item-desc">
+                <p>墨轩阁建站为您提供全行业网站制作、网站定制、网站建设服务,您可以在这里挑选网站模板,我们为您提供PC站、手机站、H5站、公众号、小程序等多种网站建设服务。</p>
+              </div>
+              <div class="product-item-price">
+                <p><em>￥</em><span>100</span> /年起</p>
+              </div>
+              <div class="product-item-btn">立即选购</div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end product -->
+<!-- service -->
+<!--
+<section class="service">
+  <div class="container">
+    {pboot:sort scode=12}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="service-item hd">
+      <ul class="clearfix">
+        {pboot:nav num=5 parent=12}
+        <li {pboot:if('[nav:scode]'=='{sort:scode}')}class="on"{/pboot:if}>
+          <a href="[nav:link]" title="[nav:name]">
+            <span class="service-item-icon">
+              <i class="fa fa-3x fa-fw" aria-hidden="true"></i>
+            </span>
+            <h4 class="service-item-column">[nav:name]</h4>
+          </a>
+        </li>
+        {/pboot:nav}
+      </ul>
+    </div>
+  </div>
+  <div class="service-list bd">
+    <ul class="container">
+      {pboot:list scode=13 order=date}
+      <li>
+        <a href="[list:link]" title="[list:title]">
+          <h5>[list:title]<em>热门</em></h5>
+          <span>[list:description len=33]</span>
+        </a>
+      </li>
+      {/pboot:list}
+    </ul>
+    <ul class="container">
+      {pboot:list scode=14 order=date}
+      <li>
+        <a href="[list:link]" title="[list:title]">
+          <h5>[list:title]<em>推荐</em></h5>
+          <span>[list:description len=33]</span>
+        </a>
+      </li>
+      {/pboot:list}
+    </ul>
+    <ul class="container">
+      {pboot:list scode=15 order=date}
+      <li>
+        <a href="[list:link]" title="[list:title]">
+          <h5>[list:title]<em>置顶</em></h5>
+          <span>[list:description len=33]</span>
+        </a>
+      </li>
+      {/pboot:list}
+    </ul>
+    <ul class="container">
+      {pboot:list scode=16 order=date}
+      <li>
+        <a href="[list:link]" title="[list:title]">
+          <h5>[list:title]<em>头条</em></h5>
+          <span>[list:description len=33]</span>
+        </a>
+      </li>
+      {/pboot:list}
+    </ul>
+    <ul class="container">
+      {pboot:list scode=17 order=date}    
+      <li>
+        <a href="[list:link]" title="[list:title]">
+          <h5>[list:title]<em>折扣</em></h5>
+          <span>[list:description len=33]</span>
+        </a>
+      </li>
+      {/pboot:list}
+    </ul>
+  </div>
+</section> -->
+<!-- end service -->
+<!-- solution -->
+<section class="solution">
+  <div class="container-fluid">
+    {pboot:sort scode=8}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="solution-item">
+      <button class="fa fa-angle-left"></button>
+      <button class="fa fa-angle-right"></button>
+      <div class="solution-slide">
+        <ul class="clearfix">
+          {pboot:list scode=8 order=date}
+          <li>
+            <span>
+              <i class="fa fa-5x" aria-hidden="true"></i>
+              <hr>
+              <h3>[list:title]</h3>
+              <p>[list:description len=25]</p>
+              <a href="[list:link]" title="[list:title]">查看详情</a>
+            </span>
+            <img src="[list:ico]" alt="[list:title]" />
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end solution -->
+<!-- cases -->
+<section class="cases">
+  <div class="container">
+    {pboot:sort scode=5}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="cases-item clearfix">
+      <div class="hd">
+        <ul>
+          {pboot:nav num=5 parent=5}
+          <li>[nav:name]</li>
+          {/pboot:nav}
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          {pboot:list scode=6 num=6 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:content drophtml=1 len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+        <ul>
+          {pboot:list scode=7 num=6 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:content drophtml=1 len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+        <ul>
+          {pboot:list scode=18 num=6 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:content drophtml=1 len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+        <ul>
+          {pboot:list scode=19 num=6 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:content drophtml=1 len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+        <ul>
+          {pboot:list scode=20 num=6 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:content drophtml=1 len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+    {pboot:sort scode=5}
+    <div class="more"><a href="[sort:link]" title="[sort:title]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
+    {/pboot:sort}
+  </div>
+</section>
+<!-- end cases -->
+<!-- number -->
+<section class="number">
+  <div class="container">
+    <ul class="clearfix">
+      
+      <li>
+        <b><i id="number-1" data-sum="10">0</i><em>年</em></b>
+        <p>互联网前沿技术经验</p>
+      </li>
+      <li>
+        <b><i id="number-2" data-sum="25">0</i><sup>+</sup></b>
+        <p>商标、专利、软件著作权</p>
+      </li>
+      <li>
+        <b><i id="number-3" data-sum="360">0</i><em>行</em></b>
+        <p>全行业覆盖</p>
+      </li>
+      <li>
+        <b><i id="number-4" data-sum="800">0</i><sup>+</sup></b>
+        <p>品牌公司的认可</p>
+      </li>
+      <li>
+        <b><i id="number-5" data-sum="5000">0</i><em>家</em></b>
+        <p>企业客户的选择</p>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- end number -->
+<!-- about -->
+<section class="about">
+  <div class="about-bg"></div>
+  <div class="container">
+    {pboot:sort scode=1}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+
+      {pboot:content id=1}
+      <p>[content:content len=165]</p>
+      {/pboot:content}
+      {pboot:sort scode=1}
+      <div class="seemore">
+        <a href="[sort:link]" title="[sort:title]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+      </div>
+      {/pboot:sort}
+
+  </div>
+</section>
+<!-- end about -->
+<!-- news -->
+<section class="news">
+	<div class="container">
+    {pboot:sort scode=2}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="news-item">
+      <div class="hd">
+        <ul>
+          {pboot:nav num=5 parent=2}
+          <li>[nav:name]</li>
+          {/pboot:nav}
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+          <li class="news-item-left">
+            {pboot:list scode=29 num=1 filter=isrecommend|1}
+            <a href="[list:link]" title="[list:title]">
+              <div class="news-img"><img src="[list:ico]" alt="[list:title]" /></div>
+              <div class="news-txt">
+                <h4>[list:title len=18]</h4> 
+                <span>[list:content drophtml=1 dropblank=1 len=50]</span>
+                <div class="news-icon">
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i>[list:date]</span>
+                  <span><i class="fa fa-eye" aria-hidden="true"></i>[list:visits]</span>
+                  <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>[list:likes]</span>
+                </div>
+              </div>
+            </a>
+            {/pboot:list}
+          </li>
+          <li class="news-item-right">
+            <ul>
+              {pboot:list scode=29 num=6 order=date}
+              <li>
+                <a href="[list:link]" title="[list:title]">
+                  <div class="news-date"><strong>[list:date style=d]</strong>[list:date style=Y-m]</div>
+                  <div class="news-text">
+                    <h5>[list:title len=20]</h5> 
+                    <span>[list:content drophtml=1 dropblank=1 len=36]</span>
+                  </div>
+                </a>
+              </li>
+              {/pboot:list}
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="news-item-left">
+            {pboot:list scode=27 num=1 filter=isrecommend|1}
+            <a href="[list:link]" title="[list:title]">
+              <div class="news-img"><img src="[list:ico]" alt="[list:title]" /></div>
+              <div class="news-txt">
+                <h4>[list:title len=18]</h4> 
+                <span>[list:content drophtml=1 dropblank=1 len=50]</span>
+                <div class="news-icon">
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i>[list:date]</span>
+                  <span><i class="fa fa-eye" aria-hidden="true"></i>[list:visits]</span>
+                  <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>[list:likes]</span>
+                </div>
+              </div>
+            </a>
+            {/pboot:list}
+          </li>
+          <li class="news-item-right">
+            <ul>
+              {pboot:list scode=27 num=6 order=date}
+              <li>
+                <a href="[list:link]" title="[list:title]">
+                  <div class="news-date"><strong>[list:date style=d]</strong>[list:date style=Y-m]</div>
+                  <div class="news-text">
+                    <h5>[list:title len=20]</h5> 
+                    <span>[list:content drophtml=1 dropblank=1 len=36]</span>
+                  </div>
+                </a>
+              </li>
+              {/pboot:list}
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="news-item-left">
+            {pboot:list scode=4 num=1 filter=isrecommend|1}
+            <a href="[list:link]" title="[list:title]">
+              <div class="news-img"><img src="[list:ico]" alt="[list:title]" /></div>
+              <div class="news-txt">
+                <h4>[list:title len=18]</h4> 
+                <span>[list:content drophtml=1 dropblank=1 len=50]</span>
+                <div class="news-icon">
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i>[list:date]</span>
+                  <span><i class="fa fa-eye" aria-hidden="true"></i>[list:visits]</span>
+                  <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>[list:likes]</span>
+                </div>
+              </div>
+            </a>
+            {/pboot:list}
+          </li>
+          <li class="news-item-right">
+            <ul>
+              {pboot:list scode=4 num=6 order=date}
+              <li>
+                <a href="[list:link]" title="[list:title]">
+                  <div class="news-date"><strong>[list:date style=d]</strong>[list:date style=Y-m]</div>
+                  <div class="news-text">
+                    <h5>[list:title len=20]</h5> 
+                    <span>[list:content drophtml=1 dropblank=1 len=36]</span>
+                  </div>
+                </a>
+              </li>
+              {/pboot:list}
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="news-item-left">
+            {pboot:list scode=28 num=1 filter=isrecommend|1}
+            <a href="[list:link]" title="[list:title]">
+              <div class="news-img"><img src="[list:ico]" alt="[list:title]" /></div>
+              <div class="news-txt">
+                <h4>[list:title len=18]</h4> 
+                <span>[list:content drophtml=1 dropblank=1 len=50]</span>
+                <div class="news-icon">
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i>[list:date]</span>
+                  <span><i class="fa fa-eye" aria-hidden="true"></i>[list:visits]</span>
+                  <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>[list:likes]</span>
+                </div>
+              </div>
+            </a>
+            {/pboot:list}
+          </li>
+          <li class="news-item-right">
+            <ul>
+              {pboot:list scode=28 num=6 order=date}
+              <li>
+                <a href="[list:link]" title="[list:title]">
+                  <div class="news-date"><strong>[list:date style=d]</strong>[list:date style=Y-m]</div>
+                  <div class="news-text">
+                    <h5>[list:title len=20]</h5> 
+                    <span>[list:content drophtml=1 dropblank=1 len=36]</span>
+                  </div>
+                </a>
+              </li>
+              {/pboot:list}
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li class="news-item-left">
+            {pboot:list scode=3 num=1 filter=isrecommend|1}
+            <a href="[list:link]" title="[list:title]">
+              <div class="news-img"><img src="[list:ico]" alt="[list:title]" /></div>
+              <div class="news-txt">
+                <h4>[list:title len=18]</h4> 
+                <span>[list:content drophtml=1 dropblank=1 len=50]</span>
+                <div class="news-icon">
+                  <span><i class="fa fa-clock-o" aria-hidden="true"></i>[list:date]</span>
+                  <span><i class="fa fa-eye" aria-hidden="true"></i>[list:visits]</span>
+                  <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>[list:likes]</span>
+                </div>
+              </div>
+            </a>
+            {/pboot:list}
+          </li>
+          <li class="news-item-right">
+            <ul>
+              {pboot:list scode=3 num=6 order=date}
+              <li>
+                <a href="[list:link]" title="[list:title]">
+                  <div class="news-date"><strong>[list:date style=d]</strong>[list:date style=Y-m]</div>
+                  <div class="news-text">
+                    <h5>[list:title len=20]</h5> 
+                    <span>[list:content drophtml=1 dropblank=1 len=36]</span>
+                  </div>
+                </a>
+              </li>
+              {/pboot:list}
+            </ul>
+          </li>
+        </ul>
+      </div>
+      {pboot:sort scode=2}
+      <div class="more"><a href="[sort:link]" title="[sort:title]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a></div>
+      {/pboot:sort}
+    </div>
+  </div>
+</section>
+<!-- end news -->
+<!-- honor -->
+<section class="honor">
+  <div class="container">
+    <div class="honor-item">
+      <ul>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_01.png" alt="诚信网站" />
+          <p>诚信网站</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_02.png" alt="可信网站" />
+          <p>可信网站</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_03.png" alt="认证联盟" />
+          <p>认证联盟</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_04.png" alt="安全联盟" />
+          <p>安全联盟</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_05.png" alt="百度认证" />
+          <p>百度认证</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_06.png" alt="服务器证书" />
+          <p>服务器证书</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_07.png" alt="iTrust网信" />
+          <p>iTrust网信</p>
+        </li>
+        <li>
+          <img src="{pboot:sitepath}/static/pc/images/xin_08.png" alt="企业信用评级" />
+          <p>企业信用评级</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end honor -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/swiper.min.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/swiper.animate.min.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/index.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/number.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+</body>
+</html>

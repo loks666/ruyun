@@ -1,0 +1,59 @@
+  <section class="header-top">
+    <div class="container">
+      <div class="header-logo">
+        <h1>
+          <a href="{pboot:sitepath}/" title="{pboot:sitetitle}">
+            <img src="{pboot:sitelogo}" alt="{pboot:sitetitle}" />
+          </a>
+        </h1>
+        <h2>助您飞跃互联网世界的技术之翼！</h2>
+      </div>
+      <div class="header-search">
+        <form action="{pboot:scaction}" method="get">
+          <input type="text" name="keyword" autocomplete="off" placeholder="搜索从这里开始...">
+          <input type="hidden" name="field" value="title">
+          <input type="hidden" name="field" value="content">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <ul>
+          {pboot:sort scode=13}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+          {pboot:sort scode=10}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+          {pboot:sort scode=26}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="header-bottom">
+    <div class="container">
+      <div class="header-nav">
+        <ul id="nav">
+          <li class="nLi">
+            <h3><a href="{pboot:sitepath}/" title="网站首页">网站首页</a></h3>
+          </li>
+          {pboot:nav}
+          <li class="nLi {pboot:if('[nav:scode]'=='{sort:tcode}')}on{/pboot:if}">
+            <h3><a href="[nav:link]" target="_blank" title="[nav:name]">[nav:name]</a></h3>
+            {pboot:if([nav:soncount]>0)}
+            <ul class="sub">
+              {pboot:2nav parent=[nav:scode]}
+              <li><a href="[2nav:link]" target="_blank" title="[2nav:name]">[2nav:name]</a></li>
+              {/pboot:2nav}
+            </ul>
+            {/pboot:if}
+          </li>
+          {/pboot:nav}
+        </ul>
+      </div>
+      <div class="header-mobile">
+        <p>【 联系电话 】<span><i class="fa fa-volume-control-phone fa-fw" aria-hidden="true"></i>{pboot:companymobile}</span></p>
+      </div>
+    </div>
+  </section>
+</header>
+<!-- end header -->

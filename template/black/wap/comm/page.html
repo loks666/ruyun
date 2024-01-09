@@ -1,0 +1,14 @@
+    <!-- page -->
+    {pboot:if({page:rows}>0)}
+    <div class="page">
+      <ul>
+        <li><a href="{page:index}"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+        <li><a href="{page:pre}"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+        {page:numbar}
+        <li><a href="{page:next}"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        <li><a href="{page:last}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    {else}
+    <div align="center">本分类下无任何数据！</div>
+    {/pboot:if}

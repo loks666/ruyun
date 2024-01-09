@@ -1,0 +1,47 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="news">
+      {pboot:list num=10 order=date}
+      <div class="row">
+        <div class="col s8">
+          <div class="news-content">
+            <a href="[list:link]" title="[list:title]">
+              <h6>[list:title len=50]</h6>
+            </a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i>[list:date style=Y-m-d]</li>
+              <li><i class="fa fa-eye"></i>[list:visits]</li>
+              <li><i class="fa fa-thumbs-o-up"></i>[list:likes]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="news-images">
+            <a href="[list:link]" title="[list:title]">
+              <img src="[list:ico]" alt="[list:title]" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+    {include file=comm/page.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

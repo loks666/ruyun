@@ -1,0 +1,135 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header class="head">
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-detail">
+      <h4>{content:title}</h4>
+      <div class="main-icon">
+        <ul>
+          <li><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{content:date}</li>
+          <li><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>{content:author}</li>
+          <li><i class="fa fa-link fa-fw" aria-hidden="true"></i>{content:source}</li>
+          <li><i class="fa fa-eye fa-fw" aria-hidden="true"></i>（{content:visits}）</li>
+          <li><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>（{content:likes}）</li>
+        </ul>
+      </div>
+      <div class="main-desc">
+        <blockquote>摘要：{content:description}</blockquote>
+        {content:content}
+        <!-- system -->
+        <div class="system">
+          <a href="javascript:void(0)" title="留言发送到邮箱">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <h5>留言系统</h5>
+            <p>留言发送到邮箱</p>
+          </a>
+          <a href="javascript:void(0)" title="多语言区域建站">
+            <i class="fa fa-language" aria-hidden="true"></i>
+            <h5>多语言版本</h5>
+            <p>多语言区域建站</p>
+          </a>
+          <a href="javascript:void(0)" title="独立手机版或自适应">
+            <i class="fa fa-tablet" aria-hidden="true"></i>
+            <h5>手机版</h5>
+            <p>独立手机版或自适应</p>
+          </a>
+          <a href="javascript:void(0)" title="小程序、APP等程序对接">
+            <i class="fa fa-link" aria-hidden="true"></i>
+            <h5>小程序API对接</h5>
+            <p>小程序、APP等程序对接</p>
+          </a>
+        </div>
+        <!-- end system -->
+        <!-- faqs -->
+        <div class="faqs">
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">
+                <span>问：</span>
+                做一个网站需要多少钱？
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="collapsible-body">
+                <p><span>答：</span>网站属于定制服务，每个网站的需求不尽相同，对展示要求及品质要求也不一，便宜的一般两三千，甚至更低，贵的可能两三万，甚至更高。</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <span>问：</span>
+                做一个网站需要多长时间？
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="collapsible-body">
+                <p><span>答：</span>具体时间长短需要根据网站的难易度，进行工作量评估；展示型企业站一般在7~15个工作日，功能性网站一般在30个工作日左右，甚至更长。</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <span>问：</span>
+                你们的网站兼容性怎么样？
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="collapsible-body">
+                <p><span>答：</span>根据百度大数据统计显示，IE6已经完全零市场份额，IE7/8也在逐渐下降趋势，我们的前端工程师在尽可能保证IE7/8的浏览性，但是仍然做不到百分百完美。我们只承诺兼IE9+/Chrome/360/Firefox/搜狗等主流市场浏览器！</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <span>问：</span>
+                你们是个人还是公司？
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="collapsible-body">
+                <p><span>答：</span>我们是正规公司，团队目前大概在10人左右，有专职的售前、售后、开发人员、备案专员等，为您提供最完善的全方位服务。</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <span>问：</span>
+                你们这边帮助客户备案吗？
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="collapsible-body">
+                <p><span>答：</span>一站式建站是非常利于您运营的，有一个稳定的空间和好的技术支持团队至关重要，直接关系到您的网站运营的成功与否。在我们这边购买域名和空间则有备案专员免费协助指导备案的。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- end faqs -->
+        <div class="main-qrcode">
+          {pboot:qrcode string={content:link}}
+          <p>扫一扫，关注我们</p>
+        </div>
+        <div class="main-tags">
+          {pboot:tags id={content:id} scode={sort:tcode}}
+          <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+          {/pboot:tags}
+        </div>
+        
+        <div class="main-likes">
+					<div class="main-likes-icon">
+            <a href="{content:likeslink}" title="点赞">
+              <i class="fa fa-thumbs-up fa-2x fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="main-likes-num">{content:likes}</div>
+				</div>
+      </div>
+    </div>
+    {include file=comm/piece.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

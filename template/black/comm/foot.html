@@ -1,0 +1,169 @@
+<!-- focus -->
+<section class="focus">
+  <div class="container">
+    <div class="focus-item">
+      <div class="section-title">
+        <h2>感兴趣吗？</h2>
+        <p>欢迎联系我们，我们愿意为您解答任何有关网站疑难问题！</p>
+      </div>
+      <div class="seemore">
+        <a href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" title="在线客服" target="_blank">立即咨询&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end focus -->
+<!-- footer -->
+<footer>
+  <!-- footer-safe -->
+  <section class="footer-safe">
+    <div class="container">
+      <ul class="clearfix">
+        <li>
+          <a href="javascript:void(0)" title="7x24小时售后支持">
+            <i class="fa fa-clock-o fa-2x fa-fw" aria-hidden="true"></i>
+            <span>7x24小时售后支持</span>
+          </a> 
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="独立手机版或自适应">
+            <i class="fa fa-internet-explorer fa-2x fa-fw" aria-hidden="true"></i>
+            <span>独立手机版或自适应</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="响应式管理后台">
+            <i class="fa fa-wikipedia-w fa-2x fa-fw" aria-hidden="true"></i>
+            <span>响应式管理后台</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="各行业海量模板">
+            <i class="fa fa-code fa-2x fa-fw" aria-hidden="true"></i>
+            <span>各行业海量模板</span>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="免费ICP备案服务">
+            <i class="fa fa-file-text fa-2x fa-fw" aria-hidden="true"></i>
+            <span>免费ICP备案服务</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- end footer-safe -->
+  <!-- footer-nav -->
+  <section class="footer-nav">
+    <div class="container">
+      <div class="footer-nav-left">
+        {pboot:nav num=6 }
+        {pboot:if([nav:soncount]>0)}
+        <dl>
+          <dt>[nav:name]</dt>
+          {pboot:2nav parent=[nav:scode]}
+          <dd><a href="[2nav:link]" title="[2nav:name]">[2nav:name]</a></dd>
+          {/pboot:2nav}
+        </dl>
+        {/pboot:if}
+        {/pboot:nav}
+      </div>
+      <div class="footer-nav-right">
+        <div class="footer-contact">
+          <div class="contact-text">
+            <p><span><i class="fa fa-phone fa-1x fa-fw"></i>{pboot:companymobile}</span> ( 7*24h )</p>
+            <dl>
+              <dd>地 址：{pboot:companyaddress}</dd>
+              <dd>E-mail：{pboot:companyemail}</dd>
+              <dd>网 址：<a href="/">{pboot:sitedomain}</a></dd>
+            </dl>
+          </div>
+          <div class="qr-code">
+            <ul class="clearfix">
+             
+              <a href="javascript:void(0)" title="微信">
+                <li>
+                  <div class="qr-code-img">
+                    <img src="{pboot:companyweixin}" alt="微信" />
+                  </div>
+                  <i class="fa fa-weixin"></i>
+                </li>
+              </a>
+              <a href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" title="QQ" target="_blank">
+                <li>
+                  <div class="qr-code-img">
+                    <img src="{pboot:sitepath}/static/pc/images/qr_qq.jpg" alt="QQ" />
+                  </div>
+                  <i class="fa fa-qq"></i>
+                </li>
+              </a>
+              <a href="javascript:void(0)" title="抖音">
+                <li>
+                  <div class="qr-code-img">
+                    <img src="{pboot:sitepath}/static/pc/images/qr_douyin.jpg" alt="抖音" />
+                  </div>
+                  <i class="fa fa-dot-circle-o"></i>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end footer-nav -->
+  <section class="container">
+    <!-- footer-links -->
+    <div class="footer-links">
+      <span>友情链接：</span>
+      <ul class="clearfix">
+        {pboot:link gid=2}
+        <li><a href="[link:link]" title="[link:name]" target="_blank">[link:name]</a></li>
+        {/pboot:link}
+      </ul>
+    </div>
+    <!-- end footer-links -->
+    <!-- footer-copyright -->
+    <div class="footer-copyright">
+      <div class="footer-copyright-txt">
+        <span>{pboot:sitecopyright}</span><a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank">{pboot:siteicp}</a><span>{pboot:sitestatistical}</span><span>{pboot:runtime}</span>
+      </div>
+      <div class="footer-copyright-links">
+        <ul class="clearfix">
+          {pboot:sort scode=10}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+          {pboot:sort scode=11}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+            {pboot:sort scode=39}
+          <li><a href="[sort:link]" title="[sort:name]">[sort:name]</a></li>
+          {/pboot:sort}
+        </ul>
+      </div>
+    </div>
+    <!-- end footer-copyright -->
+  </section>
+</footer>
+<!-- end footer -->
+<!-- alertbox -->
+
+<div id="alertbox">
+  <p class="text1">您身边的【网站建设专家】</p>
+  <p class="text2">墨轩阁网络工作室</p>
+  <p class="text3">主营项目:域名注册，解析备案，服务器主机空间租用。网站建设，企业系统开发，微信小程序等</p>
+  <span class="close"></span>
+  <a class="qqlink" href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes"  title="在线客服" target="_blank">立即咨询</a>
+  <span class="tel">{pboot:companymobile}</span>
+</div>
+<!-- end alertbox -->
+<!-- back-top -->
+<section id="back-top" class="back-top">
+  <a href="javascript:void(0)" title="返回顶部">
+    <i class="fa fa-angle-up"></i>
+  </a>
+</section>
+<!-- end back-top -->
+<script src="{pboot:sitepath}/static/pc/js/modernizr-3.6.0.min.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/jquery-1.11.1.min.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/jquery.superslide.2.1.1.js"></script>

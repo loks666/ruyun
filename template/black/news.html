@@ -1,0 +1,66 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/style.css">
+{include file=comm/top.html}
+<header class="head">
+{include file=comm/header.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-bg">
+      <div class="detail">
+        <div class="detail-title">
+          <h3>{content:title len=40}</h3>
+        </div>
+        <div class="detail-info">
+          <span><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>发布时间：{content:date}</span>
+          <span><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>作者：{content:author}</span>
+          <span><i class="fa fa-link fa-fw" aria-hidden="true"></i>来源：{content:source}</span>
+          <span><i class="fa fa-eye fa-fw" aria-hidden="true"></i>浏览量（{content:visits}）</span>
+          <span><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>点赞（{content:likes}）</span>
+        </div>
+        <div class="detail-summ">
+          摘要：{content:description}
+        </div>
+        <div class="detail-desc">
+          {content:content}
+        </div>
+        <!--<div class="qrcode">
+          {pboot:qrcode string={content:link}}
+          <p>扫一扫，关注我们</p>
+        </div>-->
+        <div class="tags">
+          {pboot:tags id={content:id} scode={sort:tcode}}
+          <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+          {/pboot:tags}
+        </div>
+        <div class="likes">
+					<div class="likes-icon">
+            <a href="{content:likeslink}" title="点赞">
+              <i class="fa fa-thumbs-up fa-3x fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="likes-num">{content:likes}</div>
+				</div>
+      </div>
+      {include file=comm/piece.html}
+      <div class="news-tips">
+        <h3>相关新闻</h3>
+        <ul>
+          {pboot:list scode={sort:scode} num=10 order=date}
+          <li>
+            <a href="[list:link]" title="[list:title]">[list:title len=30]</a>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div> 
+    </div>
+  </div>
+</section>
+<!-- main end -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+</body>
+</html>

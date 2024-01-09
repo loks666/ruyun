@@ -1,0 +1,88 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/style.css">
+{include file=comm/top.html}
+<header>
+{include file=comm/header.html}
+{include file=comm/banner.html}
+{include file=comm/subnav.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-bg">
+      <div class="sort clearfix">
+        <div class="sort-item">
+          <div class="sort-name"><span>行业分类</span></div>
+          <div class="sort-main">
+            <div class="sort-list">
+              {pboot:selectall field=ext_type text=全部 active='selected'}
+              <ul>
+                {pboot:select field=ext_type}
+                <li><a href="[select:link]" {pboot:if('[select:value]'=='[select:current]')}class="selected"{/pboot:if}>[select:value]</a></li>
+                {/pboot:select}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sort-item">
+          <div class="sort-name"><span>颜色搭配</span></div>
+          <div class="sort-main">
+            <div class="sort-list">
+              {pboot:selectall field=ext_color text=全部 active='selected'}
+              <ul>
+                {pboot:select field=ext_color}
+                <li><a href="[select:link]" {pboot:if('[select:value]'=='[select:current]')}class="selected"{/pboot:if}>[select:value]</a></li>
+                {/pboot:select}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sort-item">
+          <div class="sort-name"><span>类型</span></div>
+          <div class="sort-main">
+            <div class="sort-list">
+              {pboot:selectall field=ext_client text=全部 active='selected'}
+              <ul>
+                {pboot:select field=ext_client}
+                <li><a href="[select:link]" {pboot:if('[select:value]'=='[select:current]')}class="selected"{/pboot:if}>[select:value]</a></li>
+                {/pboot:select}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cases clearfix">
+        <ul>
+          {pboot:list num=12 order=sorting}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]" />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:description len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time"><i class="fa fa-clock-o"></i> [list:date]</div>
+              <div class="cases-type">
+                <span><i class="fa fa-tags"></i> [list:ext_type]</span>
+                <span><i class="fa fa-th"></i> [list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+      {include file=comm/page.html}
+    </div>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+</body>
+</html>

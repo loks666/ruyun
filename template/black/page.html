@@ -1,0 +1,32 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/style.css">
+{include file=comm/top.html}
+<header>
+{include file=comm/header.html}
+{include file=comm/banner.html}
+{include file=comm/subnav.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <!-- about -->
+  <div class="container">
+    <div class="main-bg">
+      <div class="main-title">
+        <h2>{content:title}</h2>
+        <p>{content:subtitle}</p>
+      </div>
+      <div class="about">
+        {content:content}
+      </div>
+    </div>
+  </div>
+  <!-- end about -->
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/number.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+</body>
+</html>

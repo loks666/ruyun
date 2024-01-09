@@ -1,0 +1,89 @@
+  <div class="container">
+    <div class="row">
+      <div class="col s2">
+        <div class="nav">
+          <a href="javascript:void(0);" data-activates="slide-out-left" class="sidenav-control-left">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col s8">
+        <div class="logo">
+          <h1>
+            <a href="{pboot:sitepath}/" title="{pboot:sitetitle}">
+              <img src="{pboot:sitelogo}" alt="{pboot:sitetitle}" />
+            </a>
+          </h1>
+        </div>
+      </div>
+      <div class="col s2">
+        <div class="search">
+          <a href="javascript:void(0);" data-activates="slide-out-right" class="sidenav-control-right">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+<!-- panel control left -->
+<section class="panel-control-left">
+  <ul id="slide-out-left" class="side-nav collapsible" data-collapsible="accordion">
+    <li class="first-list">
+      <div class="author">
+        <img src="{pboot:sitelogo}" alt="{pboot:sitetitle}" />
+        <h3>墨轩阁网络工作室</h3>
+        <h6>助您飞跃互联网世界的技术之翼！</h6>
+      </div>
+    </li>
+    <li><a href="{pboot:sitepath}/" title="网站首页"><i class="fa"></i>网站首页</a></li>
+    {pboot:nav}  
+    <li>
+      {pboot:if([nav:soncount]>0)}
+      <div class="collapsible-header">
+        <div class="icon"><i class="fa"></i></div>[nav:name]
+        <span><i class="fa fa-chevron-down"></i></span>
+      </div>
+      <div class="collapsible-body">
+        <ul class="side-nav-panel">
+          {pboot:2nav parent=[nav:scode]}
+          <li><a href="[2nav:link]" title="[2nav:name]">[2nav:name]</a></li>
+          {/pboot:2nav}
+        </ul>
+      </div>
+      {else}
+      <a href="[nav:link]" title="[nav:name]"><i class="fa"></i>[nav:name]</a>
+      {/pboot:if}
+    </li>
+    {/pboot:nav}
+  </ul>
+</section>
+<!-- end panel control left -->
+<!-- panel control right -->
+<section class="panel-control-right">
+  <div id="slide-out-right" class="side-nav collapsible"  data-collapsible="accordion">
+    <form action="{pboot:scaction}" method="get">
+      <input type="text" name="keyword" placeholder="搜索从这里开始...">
+      <input type="hidden" name="field" value="title">
+      <input type="hidden" name="field" value="content">
+      <input type="hidden" name="scode"  value="19">
+      <button type="submit" class="button"><i class="fa fa-search"></i></button>
+    </form>
+    <ul class="popular-search">
+      <li class="title">
+        <h4>热门搜索</h4>
+      </li>
+      {pboot:nav parent=12}
+      <li><a href="[nav:link]" title="[nav:name]">[nav:name]</a></li>
+      {/pboot:nav}
+      {pboot:nav parent=5}
+      <li><a href="[nav:link]" title="[nav:name]">[nav:name]</a></li>
+      {/pboot:nav}
+      {pboot:nav parent=2}
+      <li><a href="[nav:link]" title="[nav:name]">[nav:name]</a></li>
+      {/pboot:nav}
+    </ul>
+  </div>
+</section>
+<!-- end panel control right -->

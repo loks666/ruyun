@@ -1,0 +1,44 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="service">
+      <div class="row">
+        {pboot:list num=6 order=date}
+        <div class="col s6">
+          <div class="service-content">
+            <div class="service-title">
+              <h5>[list:title len=10]</h5>
+              <p>￥<span>[list:ext_price]</span> /年 起</p>
+            </div>
+            <ul>
+              {pboot:tags id=[list:id] scode={sort:tcode}}
+              <li><a href="[tags:link]" title="[tags:text]">[tags:text]</a></li>
+              {/pboot:tags}
+            </ul>
+            <div class="more">
+              <a href="[list:link]" title="[list:title]">查看更多</a>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+      {include file=comm/page.html}
+    </div>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

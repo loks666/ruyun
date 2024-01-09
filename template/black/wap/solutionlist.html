@@ -1,0 +1,39 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="solution">
+      {pboot:list order=date}
+      <div class="row">
+        <div class="col s12">
+          <a href="[list:link]" title="[list:title]">
+            <div class="solution-content">
+              <img src="[list:ico]" alt="[list:title]" />
+              <div class="mask"></div>
+              <div class="solution-text">
+                <h4>[list:title]</h4>
+                <p class="line"></p>
+                <p>[list:description len=30]</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

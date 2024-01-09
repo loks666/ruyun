@@ -1,0 +1,12 @@
+<!-- 分页 -->
+{pboot:if({page:rows}>0)}
+<div class="page">
+  <a class="page-item page-link" href="{page:index}">首页</a>
+  <a class="page-item page-link" href="{page:pre}">上一页</a>
+  {page:numbar}
+  <a class="page-item page-link" href="{page:next}">下一页</a>
+  <a class="page-item page-link" href="{page:last}">尾页</a>
+</div>
+{else}
+<div align="center">本分类下无任何数据！</div>
+{/pboot:if}

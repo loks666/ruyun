@@ -1,0 +1,30 @@
+环境要求：php7.2，mysql5.7
+
+源码安装说明：
+
+1.把data下的pbcms.sql通过软件（比如phpadmin）导入到数据库，
+
+2.然后config/database.php修改数据库连接信息。
+一般修改user，passwd，dbname就可以了，有时也可能要修改host，根据情况而定。
+
+3.网站伪静态设置：
+location / {
+	if (!-e $request_filename){
+		rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+	}
+}
+
+4.去官方获取授权码，填在后台全局配置-配置参数-基本配置-系统授权码里面。
+
+5.后台登录地址:xxxx.com/admin.php 
+默认管理员账号：admin	密码：123456
+
+
+知识扩展：http://shop.moxuangenet.com/index.php/article/1
+
+阿里云服务器购买地址：https://www.aliyun.com/minisite/goods?source=5176.11533457&userCode=a8omxugw
+
+域名注册虚拟主机购买地址（西部数码钻石代理商，产品来源西部数码官方）：http://idc.moxuangenet.com/
+
+
+

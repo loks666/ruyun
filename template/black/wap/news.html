@@ -1,0 +1,55 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header class="head">
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-detail">
+      <h4>{content:title}</h4>
+      <div class="main-icon">
+        <ul>
+          <li><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>{content:date}</li>
+          <li><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>{content:author}</li>
+          <li><i class="fa fa-link fa-fw" aria-hidden="true"></i>{content:source}</li>
+          <li><i class="fa fa-eye fa-fw" aria-hidden="true"></i>（{content:visits}）</li>
+          <li><i class="fa fa-thumbs-o-up fa-fw" aria-hidden="true"></i>（{content:likes}）</li>
+        </ul>
+      </div>
+      <div class="main-desc">
+        <blockquote>摘要：{content:description}</blockquote>
+        {content:content}
+        <div class="main-qrcode">
+          {pboot:qrcode string={content:link}}
+          <p>扫一扫，关注我们</p>
+        </div>
+        <div class="main-tags">
+          {pboot:tags id={content:id} scode={sort:tcode}}
+          <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+          {/pboot:tags}
+        </div>
+        <div class="main-likes">
+					<div class="main-likes-icon">
+            <a href="{content:likeslink}" title="点赞">
+              <i class="fa fa-thumbs-up fa-2x fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="main-likes-num">{content:likes}</div>
+				</div>
+      </div>
+    </div>
+    {include file=comm/piece.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

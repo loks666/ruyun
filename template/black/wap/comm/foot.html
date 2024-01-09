@@ -1,0 +1,167 @@
+<!-- focus -->
+<section class="focus">
+  <div class="container">
+    <div class="focus-content">
+      <h3>您还在犹豫吗？</h3>
+      <p>欢迎联系我们，我们愿意为您解答任何有关网站疑难问题！</p>
+      <div class="more">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" title="立即咨询" target="_blank">立即咨询&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end focus -->
+<!-- cover-boxes -->
+<section class="cover-boxes">
+  <div class="container">
+    <a href="javascript:void(0)" title="7×24小时售后支持">
+      <i class="fa fa-clock-o" aria-hidden="true"></i>
+      <h4>7×24</h4>
+      <p>小时售后支持</p>
+    </a>
+    <a href="javascript:void(0)" title="Explorer跨浏览器兼容">
+      <i class="fa fa-internet-explorer" aria-hidden="true"></i>
+      <h4>Explorer</h4>
+      <p>跨浏览器兼容</p>
+    </a>
+    <a href="javascript:void(0)" title="免费ICP备案服务">
+      <i class="fa fa-file-text" aria-hidden="true"></i>
+      <h4>ICP</h4>
+      <p>免费ICP备案服务</p>
+    </a>
+    <a href="javascript:void(0)" title="符合W3C标准及规范">
+      <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+      <h4>W3C</h4>
+      <p>符合W3C标准及规范</p>
+    </a>
+    <div class="clear"></div>
+  </div>
+</section>
+<!-- end cover-boxes -->
+<!-- footer-side-nav -->
+<section class="footer-side-nav">
+  <div class="container">
+    <ul class="collapsible">
+      <li><a href="{pboot:sitepath}/" title="网站首页">网站首页</a></li>
+      {pboot:nav}  
+      <li>
+        {pboot:if([nav:soncount]>0)}
+        <div class="collapsible-header">[nav:name]
+          <span><i class="fa fa-chevron-down"></i></span>
+        </div>
+        <div class="collapsible-body">
+          <ul class="side-nav-panel">
+            {pboot:2nav parent=[nav:scode]}
+            <li><a href="[2nav:link]" title="[2nav:name]">[2nav:name]</a></li>
+            {/pboot:2nav}
+          </ul>
+        </div>
+        {else}
+        <a href="[nav:link]" title="[nav:name]">[nav:name]</a>
+        {/pboot:if}
+      </li>
+      {/pboot:nav}
+    </ul>
+  </div>
+</section>
+<!-- end footer-side-nav -->
+<!-- footer -->
+<footer>
+  <div class="container">
+    <h6>联系我们</h6>
+    <div class="social-icon">
+      <ul>
+        <li>
+          <a href="tel:{pboot:companymobile}" title="电话">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="微信">
+            
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+            <div class="social-icon-img">
+              <img src="{pboot:companyweixin}" alt="微信" />
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" title="qq" target="_blank">
+            <i class="fa fa-qq" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:{pboot:companymobile}" title="邮箱">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-txt">
+      <ul>
+        <li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i><span>{pboot:companyaddress}</span></li>
+        <li><i class="fa fa-phone fa-fw" aria-hidden="true"></i><span>{pboot:companymobile}</span></li>
+        <li><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i><span>{pboot:companyemail}</span></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      {pboot:link gid=2}
+      <a href="[link:link]" title="[link:name]" target="_blank">[link:name]</a>
+      {/pboot:link}
+    </div>
+    <div class="footer-copyright">
+      <span>
+        {pboot:sitecopyright}
+        <a href="https://beian.miit.gov.cn" rel="nofollow" target="_blank">{pboot:siteicp}</a>
+        <!-- <a href="/sitemap/" title="站点地图">站点地图</a> -->
+        <span>{pboot:sitestatistical}</span>
+        <span>{pboot:runtime}</span>
+      </span>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+<!-- navbar-bottom -->
+<section class="navbar-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col s3">
+        <a href="tel:{pboot:companymobile}" title="拨打电话">
+          <i class="fa fa-volume-control-phone"></i>
+          <span>拨打电话</span>
+        </a>
+      </div>
+      <div class="col s3">
+        <a href="sms:{pboot:companymobile}" title="发送短信">
+          <i class="fa fa-comments-o"></i>
+          <span>发送短信</span>
+        </a>
+      </div>
+      <div class="col s3">
+        <a href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" title="在线客服" target="_blank">
+          <i class="fa fa-qq"></i>
+          <span>在线客服</span>
+        </a>
+      </div>
+      <div class="col s3">
+        {pboot:sort scode=11}
+        <a href="[sort:link]" title="[sort:name]">
+          <i class="fa fa-envelope-o"></i>
+          <span>[sort:name]</span>
+        </a>
+        {/pboot:sort}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end navbar-bottom -->
+<!-- back-top -->
+<section id="back-top">
+  <a href="javascript:void(0)" title="返回顶部"><i class="fa fa-angle-up"></i></a>
+</section>
+<!-- end back-top -->
+<!-- script -->
+<script src="{pboot:sitepath}/static/wap/js/jquery.min.js"></script>
+<script src="{pboot:sitepath}/static/wap/js/materialize.min.js"></script>
+<script src="{pboot:sitepath}/static/wap/js/owl.carousel.min.js"></script>
+<script src="{pboot:sitepath}/static/wap/js/main.js"></script>

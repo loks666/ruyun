@@ -1,0 +1,38 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="section-title">
+      <h2>{sort:name}</h2>
+      <div class="line"></div>
+      <span>Cooperative Partner</span>
+    </div>
+    <div class="partner">
+      <ul class="row">
+        {pboot:link gid=1 num=20}
+        <li class="col s4">
+          <a href="{pboot:httpurl}[link:link]" title="[link:name]" target="_blank">
+            <img src="{pboot:httpurl}[link:logo]" alt="[link:name]" />
+          </a>
+        </li>
+        {/pboot:link}
+      </ul>
+    </div>
+    <p>欢迎交换友情链接，E-mail：{pboot:companyemail}</p>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+<!-- slide -->
+<section class="slide">
+  <div class="slide-show owl-carousel owl-theme">
+    <div class="slide-content">
+      <div class="mask"></div>
+      <img src="{pboot:sitepath}/static/wap/images/search.jpg" alt="搜索" />
+      <div class="caption text-center">
+        <div class="container">
+          <div class="search-box">
+            <form class="search" action="{pboot:scaction}" method="get">
+              <input type="text" name="keyword" placeholder="请输入关键词">
+              <input type="hidden" name="field" value="title">
+              <input type="hidden" name="field" value="content">
+              <input type="hidden" name="scode"  value="19">
+              <button type="submit" class="button"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end slide -->
+{include file=comm/position.html}
+<!-- subnav -->
+<section class="subnav">
+  <div class="container">
+    <div class="subnav-show owl-carousel owl-theme">
+      {pboot:nav num=5 parent=5}
+      <a href="[nav:link]" title="[nav:name]" {pboot:if('[nav:scode]'=='{sort:scode}')} class="active" {/pboot:if}>[nav:name]</a>
+      {/pboot:nav}
+    </div>
+  </div>
+</section>
+<!-- end subnav -->
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="cases">
+      <div class="row">
+        {pboot:search num=12 order=date scode=5 field='title|content'}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[search:link]" title="[search:title]">
+                <img src="[search:ico]" alt="[search:title]" />
+              </a>
+            </div>
+            <h5><a href="[search:link]" title="[search:title]">[search:title len=30]</a></h5>
+            <p>[search:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [search:date style=Y-m-d]</span>
+              <span class="cases-type">[search:ext_type]</span>
+              <span class="cases-type">[search:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:search}
+      </div>
+    </div>
+    {include file=comm/page.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="section-title">
+      <h2>{sort:name}</h2>
+      <div class="line"></div>
+      <span>Qualifications and Honours</span>
+    </div>
+    <div class="honor">
+      <ul class="row">
+        {pboot:list order=date}
+        <li class="col s6">
+          <img src="[list:ico]" alt="[list:title]" />
+          <h6>[list:title]</h6>
+        </li>
+        {/pboot:list}
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

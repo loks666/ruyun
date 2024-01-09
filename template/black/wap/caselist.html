@@ -1,0 +1,86 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="sort">
+      <div class="row">
+        <div class="col s4">
+          <h6 class="sort-title">行业分类</h6>
+        </div>
+        <div class="col s8">
+          <select class="browser-default" onChange="window.location=this.value">
+            <option disabled selected>请选择行业</option>
+            <option value="/case/">全部</option>
+            {pboot:select field=ext_type}
+            <option value="[select:link]" {pboot:if('[select:value]'=='[select:current]')}selected{/pboot:if}>[select:value]</option>
+            {/pboot:select}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <h6 class="sort-title">颜色搭配</h6>
+        </div>
+        <div class="col s8">
+          <select class="browser-default" onChange="window.location=this.value">
+            <option disabled selected>请选择颜色</option>
+            <option value="/case/">全部</option>
+            {pboot:select field=ext_color}
+            <option value="[select:link]" {pboot:if('[select:value]'=='[select:current]')}selected{/pboot:if}>[select:value]</option>
+            {/pboot:select}
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <h6 class="sort-title">客户端</h6>
+        </div>
+        <div class="col s8">
+          <select class="browser-default" onChange="window.location=this.value">
+            <option disabled selected>请选择客户端</option>
+            <option value="/case/">全部</option>
+            {pboot:select field=ext_client}
+            <option value="[select:link]" {pboot:if('[select:value]'=='[select:current]')}selected{/pboot:if}>[select:value]</option>
+            {/pboot:select}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="cases">
+      <div class="row">
+        {pboot:list num=12 order=date}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]" /></a>
+            </div>
+            <h5><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h5>
+            <p>[list:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</span>
+              <span class="cases-type">[list:ext_type]</span>
+              <span class="cases-type">[list:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+    </div>
+    {include file=comm/page.html}
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

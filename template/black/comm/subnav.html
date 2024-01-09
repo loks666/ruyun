@@ -1,0 +1,13 @@
+<!-- subnav -->
+<section class="subnav">
+  <div class="container">
+    <ul>
+      {pboot:nav num=5 parent={sort:tcode}}
+      <li {pboot:if('[nav:scode]'=='{sort:scode}')} class="cur" {/pboot:if}>
+        <a href="[nav:link]" title="[nav:name]">[nav:name]</a>
+      </li>
+      {/pboot:nav}
+    </ul>
+  </div>
+</section>
+<!-- subnav end -->

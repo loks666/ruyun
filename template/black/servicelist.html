@@ -1,0 +1,48 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/style.css">
+{include file=comm/top.html}
+<header>
+{include file=comm/header.html}
+{include file=comm/banner.html}
+{include file=comm/subnav.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-bg">
+      <div class="service">
+        <ul>
+          {pboot:list num=12 order=date}
+          <li>
+            <div class="service-title">
+              <h3>【 [list:title len=10] 】</h3>
+            </div>
+            <div class="service-info">
+              <h4>[list:subtitle len=15]</h4>
+              <div class="money">￥[list:ext_price] /年 起</div>
+              <div class="tag">
+                {pboot:tags id=[list:id] scode={sort:tcode}}
+                <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+                {/pboot:tags}
+              </div>
+              <p>[list:description len=60]</p>
+            </div>
+            <div class="service-button">
+              <a class="more" href="[list:link]" title="查看更多">查看更多</a>
+              <a class="qq" href="https://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes" target="_blank" title="在线客服">立即咨询</a>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+      {include file=comm/page.html}
+    </div>
+  </div>
+</section>
+<!-- main end -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+</body>
+</html>

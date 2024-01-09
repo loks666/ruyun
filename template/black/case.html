@@ -1,0 +1,139 @@
+{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/main.css">
+<link rel="stylesheet" href="{pboot:sitepath}/static/pc/css/style.css">
+{include file=comm/top.html}
+<header class="head">
+{include file=comm/header.html}
+{include file=comm/position.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="main-bg">
+      <div class="case">
+        <div class="case-info">
+          <div class="case-title">
+            <h3>{content:title len=18}</h3>
+          </div>
+          <ul>
+            <li>
+              <span class="nature">发布时间：</span>
+              <span class="value">{content:date}</span>
+            </li>
+            <li>
+              <span class="nature">作者：</span>
+              <span class="value">{content:author}</span>
+            </li>
+            <li>
+              <span class="nature">来源：</span>
+              <span class="value">{content:source}</span>
+            </li>
+            <li>
+              <span class="nature">浏览量：</span>
+              <span class="value">（{content:visits}）</span>
+            </li>
+            <li>
+              <span class="nature">描述：</span>
+              <span class="value">{content:description len=90}</span>
+            </li>
+          </ul>
+          <div class="case-button">
+            <a class="more" href="http://{content:ext_url}/" title="查看演示" target="_blank">查看演示</a>
+            <a class="qq" href="https://wpa.qq.com/msgrd?v=3&amp;uin={pboot:companyqq}&amp;site=qq&amp;menu=yes" target="_blank" title="在线客服">立即咨询</a>
+          </div>
+        </div>
+        <div class="case-img">
+          <div class="hd">
+            <ul>
+              {pboot:pics id={content:id}}
+              <li>[pics:i]</li>
+              {/pboot:pics}
+            </ul>
+          </div>
+          <div class="bd" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+            <ul>
+              {pboot:pics id={content:id}}
+              <li>
+                <img src="[pics:src]" width="540" height="auto" alt="{content:title}" />
+              </li>
+              {/pboot:pics}
+            </ul>
+          </div>
+          <a class="prev" href="javascript:void(0)">
+            <i class="fa fa-angle-left fa-3x fa-fw" aria-hidden="true"></i>
+          </a>
+          <a class="next" href="javascript:void(0)">
+            <i class="fa fa-angle-right fa-3x fa-fw" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="case-hr"></div>
+      <div class="detail">
+        <div class="detail-desc">
+          <h4>案例介绍</h4>
+          {content:content}
+          <!-- <h4>案例截图</h4> 
+          <p>
+            {pboot:pics id={content:id}}
+            <img src="[pics:src]" alt="{content:title}" /><br /><br />
+            {/pboot:pics}
+          </p> -->
+        </div>
+        <!--<div class="qrcode">
+          {pboot:qrcode string={content:link}}
+          <p>扫一扫，关注我们</p>
+        </div> -->
+        <div class="tags">
+          {pboot:tags id={content:id} scode={sort:tcode}}
+          <a href="[tags:link]" title="[tags:text]">[tags:text]</a>
+          {/pboot:tags}
+        </div>
+        <div class="detail-sum">声明：本文由【墨轩阁】编辑上传发布，转载此文章须经作者同意，并请附上出处【墨轩阁】及本页链接。如内容、图片有任何版权问题，请联系我们进行处理。</div>
+        <div class="likes">
+					<div class="likes-icon">
+            <a href="{content:likeslink}" title="点赞">
+              <i class="fa fa-thumbs-up fa-3x fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="likes-num">{content:likes}</div>
+				</div>
+      </div>
+      {include file=comm/piece.html}
+      <div class="cases clearfix">
+        <div class="cases-tips">
+          <h3>相关案例</h3>
+        </div>
+        <ul>
+          {pboot:list scode={sort:scode} num=3 order=date}
+          <li>
+            <div class="cases-images" onmouseenter="boxMoveUp(this)" onmouseleave="boxMoveDown(this)">
+              <a href="[list:link]" title="[list:title]">
+                <img src="[list:ico]" width="340" height="auto" alt="[list:title]"  />
+              </a>
+            </div>
+            <div class="cases-text">
+              <h3><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h3>
+              <p>[list:description len=30]</p>
+            </div>
+            <div class="cases-date">
+              <div class="cases-time">[list:date style=Y-m-d]</div>
+              <div class="cases-type">
+                <span>[list:ext_type]</span>
+                <span>[list:ext_color]</span>
+              </div>
+            </div>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- main end -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/pc/js/main.js"></script>
+<script src="{pboot:sitepath}/static/pc/js/plugins.js"></script>
+<script type="text/javascript">
+	jQuery(".case-img").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true});
+</script>
+</body>
+</html>

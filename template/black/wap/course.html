@@ -1,0 +1,34 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/style.css" />
+</head>
+
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+{include file=comm/slide.html}
+{include file=comm/position.html}
+{include file=comm/subnav.html}
+<!-- main -->
+<section class="main">
+  <div class="container">
+    <div class="section-title">
+      <h2>{sort:name}</h2>
+      <div class="line"></div>
+      <span>Development Course</span>
+    </div>
+    <div class="course">
+      {pboot:list order=date}
+      <div class="course-content">
+        <h6>[list:title]</h6>
+        <span>[list:date style=Y-m-d]</span>
+      </div>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+<!-- end main -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/style.js"></script>
+</body>
+</html>

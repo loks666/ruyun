@@ -1,0 +1,464 @@
+﻿{include file=comm/head.html}
+<link rel="stylesheet" href="{pboot:sitepath}/static/wap/css/index.css" />
+</head>
+<body>
+<!-- header -->
+<header>
+{include file=comm/header.html}
+<!-- slide -->
+<section class="slide">
+  <div class="slide-show owl-carousel owl-theme">
+    {pboot:slide num=5 gid=2}
+    <div class="slide-content">
+      <div class="mask"></div>
+      <img src="[slide:src]" alt="[slide:title]" />
+      <div class="caption center">
+        <h2>[slide:title]</h2>
+        <p>[slide:subtitle]</p>
+        <div class="more">
+          <a href="[slide:link]" title="[slide:title]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+        </div>
+      </div>
+    </div>
+    {/pboot:slide}
+  </div>
+</section>
+<!-- end slide -->
+<!-- service -->
+<section class="service">
+  <div class="container">
+    {pboot:sort scode=12}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="row">
+      {pboot:sort scode=13}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-laptop red"></i>
+            <h5>[sort:name]</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+      {pboot:sort scode=14}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-mobile orange"></i>
+            <h5>[sort:name]</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+      {pboot:sort scode=15}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-bar-chart yellow"></i>
+            <h5>[sort:name]</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+      {pboot:sort scode=16}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-cog green"></i>
+            <h5>[sort:name]</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+      {pboot:sort scode=17}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-registered blue"></i>
+            <h5>[sort:name]</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+      {pboot:sort scode=12}
+      <div class="col s6">
+        <div class="service-content">
+          <a href="[sort:link]" title="[sort:name]">
+            <i class="fa fa-ellipsis-h purple"></i>
+            <h5>查看更多</h5>
+          </a>
+        </div>
+      </div>
+      {/pboot:sort}
+    </div>
+  </div>
+</section>
+<!-- end service -->
+<!-- solution -->
+<section class="solution">
+  <div class="container">
+    {pboot:sort scode=8}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+  </div>
+  <div class="solution-item">
+    <div class="solution-show owl-carousel owl-theme">
+      {pboot:list scode=8 order=date}
+      <div class="content">
+        <a href="[list:link]" title="[list:title]">
+          <div class="mask"></div>
+          <img src="[list:ico]" alt="[list:title]" />
+          <div class="caption">
+            <h2>[list:title]</h2>
+            <p>[list:description len=30]</p>
+          </div>
+        </a>
+      </div>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+<!-- end solution -->
+<!-- cases -->
+<section class="cases">
+  <div class="container">
+    {pboot:sort scode=5}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="row no-mb">
+      <div class="col s12">
+        <ul class="tabs">
+          {pboot:nav num=4 parent=5}
+          <li class="tab col s3"><a href="#totabs[nav:i]" title="[nav:name]" {pboot:if('[nav:scode]'=='{sort:scode}')}class="active"{/pboot:if}>[nav:name]</a></li>
+          {/pboot:nav}
+        </ul>
+      </div>
+    </div>
+    <div id="totabs1">
+      <div class="row">
+        {pboot:list scode=6 num=10 order=date}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]" /></a>
+            </div>
+            <h5><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h5>
+            <p>[list:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</span>
+              <span class="cases-type">[list:ext_type]</span>
+              <span class="cases-type">[list:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+    </div>
+    <div id="totabs2">
+      <div class="row">
+        {pboot:list scode=7 num=10 order=date}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]" /></a>
+            </div>
+            <h5><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h5>
+            <p>[list:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</span>
+              <span class="cases-type">[list:ext_type]</span>
+              <span class="cases-type">[list:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+    </div>
+    <div id="totabs3">
+      <div class="row">
+        {pboot:list scode=18 num=10 order=date}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]" /></a>
+            </div>
+            <h5><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h5>
+            <p>[list:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</span>
+              <span class="cases-type">[list:ext_type]</span>
+              <span class="cases-type">[list:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+    </div>
+    <div id="totabs4">
+      <div class="row">
+        {pboot:list scode=19 num=10 order=date}
+        <div class="col s12">
+          <div class="content">
+            <div class="cases-img">
+              <a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]" /></a>
+            </div>
+            <h5><a href="[list:link]" title="[list:title]">[list:title len=30]</a></h5>
+            <p>[list:description len=30]</p>
+            <div class="cases-date">
+              <span class="cases-time"><i class="fa fa-clock-o"></i> [list:date style=Y-m-d]</span>
+              <span class="cases-type">[list:ext_type]</span>
+              <span class="cases-type">[list:ext_color]</span>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+      </div>
+    </div>
+    {pboot:sort scode=2}
+    <div class="more">
+      <a href="[sort:link]" title="[sort:name]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+    </div>
+    {/pboot:sort}
+  </div>
+</section>
+<!-- end cases -->
+<!-- number -->
+<section class="number">
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <div class="number-content">
+          <h3 class="num" data-num="10">10</h3><sup>+</sup><sub>年</sub>
+          <h6>行业经验</h6>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="number-content">
+          <h3 class="num" data-num="800">800</h3><sup>+</sup><sub>家</sub>
+          <h6>企业选择</h6>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="number-content">
+          <h3 class="num" data-num="360">360</h3><sup>+</sup><sub>个</sub>
+          <h6>行业覆盖</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end number -->
+<!-- about -->
+<section class="about">
+  <div class="container">
+    {pboot:sort scode=1}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="about-content">
+      <i class="fa fa-quote-left"></i>
+      {pboot:content id=1}
+      <p>[content:description len=210]</p>
+      {/pboot:content}
+      {pboot:sort scode=1}
+      <div class="more">
+        <a href="[sort:link]" title="[sort:name]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+      </div>
+      {/pboot:sort}
+    </div>
+  </div>
+</section>
+<!-- end about -->
+<!-- news -->
+<section class="news">
+  <div class="container">
+    {pboot:sort scode=2}
+    <div class="section-title">
+      <h2>[sort:name]</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <p>[sort:subname]</p>
+    </div>
+    {/pboot:sort}
+    <div class="row no-mb">
+      <div class="col s12">
+        <ul class="tabs">
+          {pboot:nav num=4 parent=2}
+          <li class="tab col s3"><a href="#tabs[nav:i]" title="[nav:name]" {pboot:if('[nav:scode]'=='{sort:scode}')}class="active"{/pboot:if}>[nav:name]</a></li>
+          {/pboot:nav}
+        </ul>
+      </div>
+    </div>
+    <div id="tabs1">
+      {pboot:list scode=29 num=10 order=date}
+      <div class="row">
+        <div class="col s8">
+          <div class="news-content">
+            <a href="[list:link]" title="[list:title]">
+              <h6>[list:title len=20]</h6>
+            </a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i>[list:date style=Y-m-d]</li>
+              <li><i class="fa fa-eye"></i>[list:visits]</li>
+              <li><i class="fa fa-thumbs-o-up"></i>[list:likes]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="news-images">
+            <a href="[list:link]" title="[list:title]">
+              <img src="[list:ico]" alt="[list:title]" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+    <div id="tabs2">
+      {pboot:list scode=3 num=10 order=date}
+      <div class="row">
+        <div class="col s8">
+          <div class="news-content">
+            <a href="[list:link]" title="[list:title]">
+              <h6>[list:title len=20]</h6>
+            </a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i>[list:date style=Y-m-d]</li>
+              <li><i class="fa fa-eye"></i>[list:visits]</li>
+              <li><i class="fa fa-thumbs-o-up"></i>[list:likes]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="news-images">
+            <a href="[list:link]" title="[list:title]">
+              <img src="[list:ico]" alt="[list:title]" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+    <div id="tabs3">
+      {pboot:list scode=27 num=10 order=date}
+      <div class="row">
+        <div class="col s8">
+          <div class="news-content">
+            <a href="[list:link]" title="[list:title]">
+              <h6>[list:title len=20]</h6>
+            </a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i>[list:date style=Y-m-d]</li>
+              <li><i class="fa fa-eye"></i>[list:visits]</li>
+              <li><i class="fa fa-thumbs-o-up"></i>[list:likes]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="news-images">
+            <a href="[list:link]" title="[list:title]">
+              <img src="[list:ico]" alt="[list:title]" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+    <div id="tabs4">
+      {pboot:list scode=28 num=10 order=date}
+      <div class="row">
+        <div class="col s8">
+          <div class="news-content">
+            <a href="[list:link]" title="[list:title]">
+              <h6>[list:title len=20]</h6>
+            </a>
+            <ul>
+              <li><i class="fa fa-clock-o"></i>[list:date style=Y-m-d]</li>
+              <li><i class="fa fa-eye"></i>[list:visits]</li>
+              <li><i class="fa fa-thumbs-o-up"></i>[list:likes]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="news-images">
+            <a href="[list:link]" title="[list:title]">
+              <img src="[list:ico]" alt="[list:title]" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {/pboot:list}
+    </div>
+    {pboot:sort scode=2}
+    <div class="more">
+      <a href="[sort:link]" title="[sort:name]">查看更多&nbsp;&nbsp;<i class="fa fa-angle-double-right"></i></a>
+    </div>
+    {/pboot:sort}
+  </div>
+</section>
+<!-- end news -->
+<!-- honor -->
+<section class="honor">
+  <div class="container">
+    <div class="honor-show owl-carousel owl-theme">
+      <a href="javascript:void(0)" class="item" title="诚信网站">
+        <img src="{pboot:sitepath}/static/wap/images/xin_01.png" alt="诚信网站" />
+        <p>诚信网站</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="可信网站">
+        <img src="{pboot:sitepath}/static/wap/images/xin_02.png" alt="可信网站" />
+        <p>可信网站</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="认证联盟">
+        <img src="{pboot:sitepath}/static/wap/images/xin_03.png" alt="认证联盟" />
+        <p>认证联盟</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="安全联盟">
+        <img src="{pboot:sitepath}/static/wap/images/xin_04.png" alt="安全联盟" />
+        <p>安全联盟</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="百度认证">
+        <img src="{pboot:sitepath}/static/wap/images/xin_05.png" alt="百度认证" />
+        <p>百度认证</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="服务器证书">
+        <img src="{pboot:sitepath}/static/wap/images/xin_06.png" alt="服务器证书" />
+        <p>服务器证书</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="iTrust网信">
+        <img src="{pboot:sitepath}/static/wap/images/xin_07.png" alt="iTrust网信" />
+        <p>iTrust网信</p>
+      </a>
+      <a href="javascript:void(0)" class="item" title="企业信用">
+        <img src="{pboot:sitepath}/static/wap/images/xin_08.png" alt="企业信用" />
+        <p>企业信用</p>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- end honor -->
+{include file=comm/foot.html}
+<script src="{pboot:sitepath}/static/wap/js/index.js"></script>
+<script src="{pboot:sitepath}/static/wap/js/numscroll.js"></script>
+</body>
+</html>
