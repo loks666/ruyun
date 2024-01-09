@@ -2,10 +2,10 @@
 return array(
     
     // 授权码，多个授权码使用英文逗号隔开，如：'aaaaa,bbbbb'
-    'sn' => 'B8E8D29712',
+    'sn' => 'E9EBBC41BA',
     
     // 授权用户手机
-    'sn_user' => '',
+    'sn_user' => '16621370084',
     
     // 模板内容输出缓存开关
     'tpl_html_cache' => 0,
